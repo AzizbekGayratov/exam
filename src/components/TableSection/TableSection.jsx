@@ -69,7 +69,7 @@ export default function TableSection() {
     dispatch(setProjects(filterData(data)));
   }, [search, data]);
 
-  return (
+    return (
     <section className="">
       <div className="max-w-[1280px] mx-auto px-6">
         <h3 className="mt-[18px] font-Montserrat text-[34px] leading-[42px] text-center text-white mb-4">

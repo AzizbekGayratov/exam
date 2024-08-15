@@ -47,7 +47,7 @@ export default function CarouselComponent() {
   return (
     <div className="h-[196px] py-[27px]">
       {result.length === 0 ? (
-        <p className="text-center text-secondary text-3xl font-Roboto">
+        <p className="text-center text-secondary text-4xl font-Roboto">
           No coins found
         </p>
       ) : (
