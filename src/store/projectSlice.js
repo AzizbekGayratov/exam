@@ -1,11 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getFromLocalStorage, setToLocalStorage } from "../utils";
 
 const projectSlice = createSlice({
   name: "project",
   initialState: {
     data: [],
-    currency: getFromLocalStorage("currency") || {
+    currency: JSON.parse(localStorage.getItem("currency")) || {
       currency: "USD",
       symbol: "$",
     },
@@ -50,7 +49,7 @@ const projectSlice = createSlice({
           symbol: "$",
         };
       }
-      setToLocalStorage("currency", state.currency);
+      localStorage.setItem("currency", JSON.stringify(state.currency));
     },
     setIsDrawerOpen: (state, action) => {
       state.isDrawerOpen = action.payload;
